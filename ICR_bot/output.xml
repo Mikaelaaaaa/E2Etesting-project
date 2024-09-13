@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-09-12T19:10:10.945898" rpa="false" schemaversion="5">
+<suite id="s1" name="Smoke Test" source="c:\Users\tpi\Desktop\自動化測試\robotframeworker\RegressionTestSuites\smoke test.robot">
+<test id="s1-t1" name="Login to Page PUZZLE" line="18">
+<kw name="Create Driver" owner="Custom">
+<msg time="2024-09-12T19:10:12.823952" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-09-12T19:10:16.719920" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-09-12T19:10:16.919656" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-09-12T19:10:17.107640" level="INFO">Driver [C:\Users\tpi\.wdm\drivers\chromedriver\win64\128.0.6613.137\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg time="2024-09-12T19:10:17.107640" level="INFO">Using default request storage</msg>
+<msg time="2024-09-12T19:10:17.117591" level="INFO">Created proxy listening on 127.0.0.1:54344</msg>
+<msg time="2024-09-12T19:10:19.068021" level="INFO">${driver} = &lt;seleniumwire.webdriver.Chrome (session="78b58be26b6a36cdb7e9f10cfd88365e")&gt;</msg>
+<var>${driver}</var>
+<arg>full_page</arg>
+<status status="PASS" start="2024-09-12T19:10:12.821956" elapsed="6.246065"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-12T19:10:19.094426" level="INFO">&lt;seleniumwire.webdriver.Chrome (session="78b58be26b6a36cdb7e9f10cfd88365e")&gt;</msg>
+<arg>${driver}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-12T19:10:19.088384" elapsed="0.008027"/>
+</kw>
+<kw name="Go To" owner="Custom">
+<arg>http://192.168.118.36/login</arg>
+<status status="PASS" start="2024-09-12T19:10:19.097405" elapsed="4.080001"/>
+</kw>
+<kw name="Log In To Systalk" owner="Custom">
+<arg>TestRobot001</arg>
+<arg>TestRobot001@!</arg>
+<status status="PASS" start="2024-09-12T19:10:23.178894" elapsed="0.884908"/>
+</kw>
+<kw name="Go To Puzzle" owner="Custom">
+<status status="PASS" start="2024-09-12T19:10:24.066980" elapsed="1.067058"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-12T19:10:27.137647" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-12T19:10:25.136039" elapsed="2.001608"/>
+</kw>
+<kw name="Switch Tab" owner="Custom">
+<status status="PASS" start="2024-09-12T19:10:27.397962" elapsed="0.341172"/>
+</kw>
+<kw name="Get Complete Url" owner="Custom">
+<msg time="2024-09-12T19:10:27.796003" level="INFO">${complete_url} = https://192.168.118.90/datasets?code=rg60s84mkb2g7m6edsh2kpfi8</msg>
+<var>${complete_url}</var>
+<status status="PASS" start="2024-09-12T19:10:27.741870" elapsed="0.054133"/>
+</kw>
+<kw name="Close Browser" owner="Custom">
+<status status="PASS" start="2024-09-12T19:10:27.806160" elapsed="3.116106"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:30.925107" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-09-12T19:10:30.924122" elapsed="1.865820"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:32.817637" level="INFO">Opening url 'https://192.168.118.90/datasets?code=rg60s84mkb2g7m6edsh2kpfi8'</msg>
+<arg>${complete_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-09-12T19:10:32.809351" elapsed="0.371079"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:33.196133" level="INFO">Clicking button 'css:#details-button'.</msg>
+<arg>css:#details-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:33.184414" elapsed="0.159930"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:#proceed-link</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-12T19:10:33.394036" elapsed="0.143570"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:33.540156" level="INFO">Clicking link 'css:#proceed-link'.</msg>
+<arg>css:#proceed-link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:33.538320" elapsed="0.889044"/>
+</kw>
+<kw name="Take Screenshot IF Failed" owner="general" type="TEARDOWN">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary" type="SETUP">
+<arg>EMBED</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-09-12T19:10:34.431339" elapsed="0.000997"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2024-09-12T19:10:34.433333" elapsed="0.000997"/>
+</kw>
+<status status="PASS" start="2024-09-12T19:10:34.429343" elapsed="0.005984"/>
+</kw>
+<doc>準備puzzle的測試環境</doc>
+<tag>test:retry(2)</tag>
+<timeout value="1 hour"/>
+<status status="PASS" start="2024-09-12T19:10:12.819964" elapsed="21.619353"/>
+</test>
+<test id="s1-t2" name="Pre-conditions" line="37">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-09-12T19:10:34.452963" level="INFO">${date} = 240912</msg>
+<var>${date}</var>
+<arg>result_format=%y%m%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-09-12T19:10:34.450987" elapsed="0.001976"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:34.456086" level="INFO">Clicking element 'css:.stai-button'.</msg>
+<arg>css:.stai-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:34.455089" elapsed="0.665015"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:35.122097" level="INFO">Typing text 'moketest240912' into text field 'css:.form-control-1 input'.</msg>
+<arg>css:.form-control-1 input</arg>
+<arg>moketest${date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:35.122004" elapsed="0.331546"/>
+</kw>
+<kw name="Choose Dataset Type" owner="PageDataSets">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:35.457988" level="INFO">Clicking element 'xpath:.//*[@placeholder="請選擇資料集類型"]'.</msg>
+<arg>xpath:.//*[@placeholder="請選擇資料集類型"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:35.457634" elapsed="0.106273"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-12T19:10:35.567646" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${type_cn}.index("${type}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-12T19:10:35.565917" elapsed="0.001729"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:35.569609" level="INFO">Clicking element 'xpath://*[@id="mat-option-2"]//*'.</msg>
+<arg>xpath://*[@id="mat-option-${index}"]//*</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:35.568769" elapsed="0.152642"/>
+</kw>
+<arg>OCR資料集</arg>
+<status status="PASS" start="2024-09-12T19:10:35.456536" elapsed="0.264875"/>
+</kw>
+<kw name="Choose Dataset Language" owner="PageDataSets">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:35.744312" level="INFO">Clicking element 'xpath:.//*[@placeholder="請選擇語系"]'.</msg>
+<arg>xpath:.//*[@placeholder="請選擇語系"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:35.743622" elapsed="0.156697"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:35.901316" level="INFO">Clicking element 'xpath:.//span[contains(text(), '繁體中文')]'.</msg>
+<arg>xpath:.//span[contains(text(), '${language_list}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:35.900319" elapsed="0.131873"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:36.033189" level="INFO">Clicking element 'css=.cdk-overlay-container'.</msg>
+<arg>css=.cdk-overlay-container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:36.033189" elapsed="0.128878"/>
+</kw>
+<arg>繁體中文</arg>
+<status status="PASS" start="2024-09-12T19:10:35.742625" elapsed="0.419442"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-12T19:10:37.164457" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-12T19:10:36.163065" elapsed="1.001392"/>
+</kw>
+<kw name="Submit Dataset" owner="PageDataSets">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:37.167428" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:37.167428" elapsed="0.093566"/>
+</kw>
+<status status="PASS" start="2024-09-12T19:10:37.166431" elapsed="0.094563"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-12T19:10:39.271473" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-12T19:10:37.270227" elapsed="2.001246"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath:.//*[contains(text(), 'smoketest${date}')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-09-12T19:10:39.272476" elapsed="0.364789"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-12T19:10:39.639263" level="INFO">Clicking element 'xpath:.//*[contains(text(), 'smoketest240912')]'.</msg>
+<arg>xpath:.//*[contains(text(), 'smoketest${date}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-12T19:10:39.638279" elapsed="0.207096"/>
+</kw>
+<kw name="Take Screenshot IF Failed" owner="general" type="TEARDOWN">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary" type="SETUP">
+<arg>EMBED</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-09-12T19:10:39.855865" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2024-09-12T19:10:39.856864" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-12T19:10:39.854348" elapsed="0.003514"/>
+</kw>
+<doc>新增一個OCR資料集</doc>
+<tag>OCR</tag>
+<tag>test:retry(2)</tag>
+<status status="PASS" start="2024-09-12T19:10:34.445988" elapsed="5.420848"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-12T19:10:39.877139" elapsed="2.474381"/>
+</kw>
+<doc>ICR 冒煙測試</doc>
+<status status="PASS" start="2024-09-12T19:10:10.953419" elapsed="31.398101"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">OCR</stat>
+<stat pass="2" fail="0" skip="0">test:retry(2)</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Smoke Test">Smoke Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

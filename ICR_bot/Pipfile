@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyautogui = "*"
+selenium = "*"
+icecream = "*"
+opencv-python = "*"
+numpy = "*"
+python-dotenv = "*"
+selenium-wire = "*"
+blinker = "==1.7.0"
+robotframework = "*"
+robotframework-seleniumlibrary = "*"
+webdrivermanager = "*"
+inquirer = "*"
+keyboard = "*"
+robotframework-seleniumwire = "==0.1.1"
+robotframework-retryfailed = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+python_full_version = "3.9.0"
